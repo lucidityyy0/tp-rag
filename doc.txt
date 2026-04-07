@@ -1,0 +1,20 @@
+Code Python qui affiche les 10 premiers nombres premiers:
+
+
+    def premiers_nombres(n):
+        nombres_premiers = []
+        nombre = 2
+        while len(nombres_premiers) < n:
+            for i in range(2, nombre):
+                if nombre % i == 0:
+                    break
+            else:
+                nombres_premiers.append(nombre)
+            nombre += 1
+        return nombres_premiers
+
+    resultat = premiers_nombres(10)
+    print(resultat)
+    
+Résultat:
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
